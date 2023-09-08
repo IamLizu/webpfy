@@ -1,0 +1,26 @@
+{
+  "name": "webpfy",
+  "version": "1.0.0",
+  "description": "A utility to convert images to WebP format",
+  "main": "dist/webpfy.js",
+  "types": "dist/webpfy.d.ts", 
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IamLizu/webpfy"
+  },
+  "bugs": {
+    "url": "https://github.com/IamLizu/webpfy/issues"
+  },
+  "keywords": ["webp", "image", "conversion", "utility", "typescript"],
+  "author": "S. M. Mahmudul Hasan",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.2.2" 
+  }
+}

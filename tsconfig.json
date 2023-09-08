@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "target": "ES2021", // Target ES version supported by Node.js 18
+      "module": "ESNext", // ES modules
+      "outDir": "./dist",                // Specify the output directory for compiled JavaScript files
+      "rootDir": "./src",                // Specify the root directory of your TypeScript source files
+      "strict": true,                    // Enable strict type checking
+      "esModuleInterop": true,           // Allow default imports from modules with no default export
+      "skipLibCheck": true,              // Skip type checking of declaration files
+      "forceConsistentCasingInFileNames": true,  // Ensure consistent file name casing
+      "declaration": true,               // Generate TypeScript declaration files (.d.ts)
+      "declarationDir": "./dist",        // Specify the output directory for declaration files
+      "sourceMap": true                  // Generate source maps for easier debugging
+    },
+    "include": ["src/**/*.ts"],          // Specify the files to include in compilation
+    "exclude": ["node_modules"]          // Specify the files and directories to exclude from compilation
+  }
+  
