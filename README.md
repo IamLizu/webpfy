@@ -1,10 +1,10 @@
 # webpfy
 
-webpfy is a utility for converting images to the WebP format. It provides a simple and efficient way to convert images in various formats (e.g., JPEG, PNG) to the modern and highly efficient WebP format, reducing image file sizes without compromising quality.
+`webpfy` is a utility for converting images to the WebP format. It provides a simple and efficient way to convert images in various formats (e.g., JPEG, PNG) to the modern and highly efficient WebP format, reducing image file sizes without compromising quality.
 
 ## Installation
 
-To use webpfy in your project, you can install it via npm:
+To use `webpfy` in your project, you can install it via npm:
 
 ```bash
 npm install webpfy
@@ -14,7 +14,7 @@ yarn add webpfy
 
 ## Usage
 
-To convert an image to WebP format using webpfy, you can import the function and use it as follows:
+To convert an image to WebP format using `webpfy`, you can import the function and use it as follows:
 
 ```js
 import webpfy from 'webpfy';
@@ -59,7 +59,40 @@ webpfy(options)
 
 ## Examples
 
-Here's a complete example of how to use webpfy in a React component,
+The examples may not be clean code but they are just examples. You can use `webpfy` in any way you want. All you need is to call the function with the right parameters. And you can use the returned values in any way you want.
+
+Here's how I use `webpfy` in my React project,
+
+```js
+/* rest of the relevant code */
+
+const handleFileUpload = async (e) => {
+    const file = e.target.files[0];
+
+    try {
+        const { webpBlob, fileName } = await webpfy({ image: file }); // keeping the quality default
+
+        // Pass the webpBlob and fileName to the parent component to make API calls
+        getImage(webpBlob, fileName);
+    } catch (error) {
+        console.error("Error converting image to WebP:", error);
+    }
+};
+
+/* rest of the relevant code */
+
+<input
+    type="file"
+    name="image"
+    id="image"
+    accept="images/*"
+    onChange={handleFileUpload}
+/>;
+
+/* rest of the relevant code */
+```
+
+Here's a complete example of how to use `webpfy` in a React component,
 
 ```js
 import React, { useState } from "react";
@@ -167,6 +200,6 @@ webpfy(options)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](#license) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/IamLizu/webpfy/blob/main/LICENSE) file for details.
 
 Feel free to customize the README file further to match your project's specific requirements and branding. This README provides a basic structure with documentation, usage instructions, and an example for using `webpfy` in a React application.
